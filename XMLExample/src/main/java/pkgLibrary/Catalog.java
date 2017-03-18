@@ -1,13 +1,18 @@
 package pkgLibrary;
 
+import java.io.File;
 import java.util.ArrayList;
 
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.*;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 
-public class Catalog {
+public class Catalog{
+	
 
 	@XmlAttribute
 	int id;	
@@ -33,13 +38,43 @@ public class Catalog {
 		this.books = books;
 	}
 	
+	public Book getBook(String Bookid) throws BookException{
+		try {
+			for (Book b: this.getBooks()){
+				if (b.getId() == Bookid)
+					return b;}
+				
+				throw new BookException(this, Bookid);
+			} catch (BookException BE) {
+				throw BE;
+			}
+			catch (Exception e)
+			{
+				throw e;
+			}
+		}
 
-	
-	
-
-
-	
-	
-	
-	
+	public void addBook(Book b) throws BookException{
+		try {
+			for (Book catBook: this.getBooks()){
+				if (b.getId() == catBook.getId())
+				{
+					throw new BookException(this, b);
+				}
+			}	
+		} catch (BookException BE) {
+			throw BE;
+		}
+		catch (Exception e)
+		{
+			throw e;
+			}
+		
+		this.getBooks().add(b);}
 }
+	
+
+
+	
+
+

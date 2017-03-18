@@ -6,8 +6,8 @@
 				<xsd:element name="book" minOccurs="0" maxOccurs="unbounded">
 					<xsd:complexType>
 						<xsd:sequence>
-							<xsd:element name="author" type="xsd:string">
-							</xsd:element>
+							<xsd:element name="author" type="xsd:string" />
+							<xsd:element name="cost" type="xsd:double" />
 							<xsd:element name="title" type="xsd:string" />
 							<xsd:element name="genre" type="xsd:string" />
 							<xsd:element name="price">
@@ -31,4 +31,6 @@
 	</xsd:element>
 
 
+
+    <xsd:attribute name="cost" type="xsd:double"></xsd:attribute>
 </xsd:schema>

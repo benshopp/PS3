@@ -11,6 +11,7 @@ import pkgLibrary.Book;
 import pkgLibrary.Catalog;
 
 public class XMLReader {
+	
 
 	public static void main(String[] args) {
 
@@ -24,6 +25,8 @@ public class XMLReader {
 		
 		//	Write the XML file from 'cat' object
 		WriteXMLFile(cat);
+		
+
 		
 	}
 
