@@ -10,6 +10,10 @@ import org.junit.Test;
 
 public class CatalogTest {
 
+	
+	//I don't fully understand Junit testing
+	
+	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	}
@@ -30,7 +34,7 @@ public class CatalogTest {
 	public void testgetBook() {
 		Catalog tester = new Catalog();
 		Book result = tester.getBook("109");
-		assertEquals("Creepy Crawlies" ,result);
+		assertEquals("Creepy Crawlies", result);
 	}
 	@Test
 	public void testaddBook(){

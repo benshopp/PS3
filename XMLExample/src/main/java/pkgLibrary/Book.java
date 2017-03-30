@@ -21,7 +21,7 @@ public class Book {
 
 	}
 
-	public Book(String id, String author, String title, String genre, double price, Date publish_date, String description, double cost)
+	public Book(String id, String author, String title, String genre, double price, Date publish_date, String description)
 	{
 		super();
 		this.id = id;
